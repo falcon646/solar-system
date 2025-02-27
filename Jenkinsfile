@@ -4,10 +4,9 @@ pipeline {
         nodejs 'nodejs-22.14'
     }
     stages{
-        stage("Npm test"){
+        stage("Version Test") {
             steps {
-                sh "npm -v"
-                sh "node -v"
+                sh "npm install --no-audit"
             }
         }
     }
