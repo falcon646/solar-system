@@ -10,7 +10,9 @@ pipeline {
             }
         }
         stage("Npm Dependency Audit"){
-            sh 'npm audit --audit-level=critical'
+            steps{
+                sh 'npm audit --audit-level=critical'
+            }
         }
     }
 }
